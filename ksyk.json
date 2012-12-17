@@ -17,6 +17,26 @@ ksyk={
       "image":"early-jump.png",
       "mass":{"location":8, "length":8},
       "bound":{"x":0, "y":1, "w": 26, "h": 31}
+    },
+    "run-1":{
+      "image":"early-run-1.png",
+      "mass":{"location":8, "length": 8},
+      "bound":{"x":3, "y":0, "w":24, "h": 24}
+    },
+    "run-2":{
+      "image":"early-run-2.png",
+      "mass":{"location":8, "length": 8},
+      "bound":{"x":6, "y":0, "w":18, "h": 26}
+    },
+    "run-3":{
+      "image":"early-run-3.png",
+      "mass":{"location":8, "length": 8},
+      "bound":{"x":2, "y":0, "w":22, "h": 24}
+    },
+    "run-4":{
+      "image":"early-run-2.png",
+      "mass":{"location":8, "length": 8},
+      "bound":{"x":6, "y":0, "w":18, "h": 26}
     }
   }
 }

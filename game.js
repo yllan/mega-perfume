@@ -57,6 +57,10 @@ mega.moveRight = function(s) {
   this.x = Math.min(s.w * TILE_SIZE * SCALE, this.x + 5);
 }
 
+var fill = 5;
+var count = 0;
+
+
 mega.update = function(s) {
   if (this.status == "jump") {
     if (keyboard[LEFT_KEY]) {
@@ -80,9 +84,113 @@ mega.update = function(s) {
     if (keyboard[LEFT_KEY]) {
       this.left = true;
       this.moveLeft(s);
+      count = fill;
+      this.status = "run-1";
     } else if (keyboard[RIGHT_KEY]) {
       this.left = false;
       this.moveRight(s);
+      count = fill;
+      this.status = "run-1";
+    }
+  } else if (this.status == "run-1") {
+    if (keyboard[LEFT_KEY]) {
+      this.left = true;
+      this.moveLeft(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-2";        
+      }
+    } else if (keyboard[RIGHT_KEY]) {
+      this.left = false;
+      this.moveRight(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-2";
+      }
+    } else {
+      this.status = "stand";
+    }
+  } else if (this.status == "run-1") {
+    if (keyboard[LEFT_KEY]) {
+      this.left = true;
+      this.moveLeft(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-2";
+      }
+    } else if (keyboard[RIGHT_KEY]) {
+      this.left = false;
+      this.moveRight(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-2";
+      }
+    } else {
+      this.status = "stand";
+    }
+  } else if (this.status == "run-2") {
+    if (keyboard[LEFT_KEY]) {
+      this.left = true;
+      this.moveLeft(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-3";
+      }
+    } else if (keyboard[RIGHT_KEY]) {
+      this.left = false;
+      this.moveRight(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-3";
+      }
+    } else {
+      this.status = "stand";
+    }
+  } else if (this.status == "run-3") {
+    if (keyboard[LEFT_KEY]) {
+      this.left = true;
+      this.moveLeft(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-4";
+      }
+    } else if (keyboard[RIGHT_KEY]) {
+      this.left = false;
+      this.moveRight(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-4";
+      }
+    } else {
+      this.status = "stand";
+    }
+  } else if (this.status == "run-4") {
+    if (keyboard[LEFT_KEY]) {
+      this.left = true;
+      this.moveLeft(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-1";
+      }
+    } else if (keyboard[RIGHT_KEY]) {
+      this.left = false;
+      this.moveRight(s);
+      count--;
+      if (count == 0) {
+        count = fill;
+        this.status = "run-1";
+      }
+    } else {
+      this.status = "stand";
     }
   }
 }
