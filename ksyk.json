@@ -13,7 +13,17 @@ ksyk={
       "mass":{"location":8, "length":8},
       "bound":{"x":1, "y":0, "w": 21, "h": 24}
     },
+    "move":{
+      "image":"early-move.png",
+      "mass":{"location":8, "length":8},
+      "bound":{"x":1, "y":0, "w": 21, "h": 24}
+    },
     "jump":{
+      "image":"early-jump.png",
+      "mass":{"location":8, "length":8},
+      "bound":{"x":0, "y":1, "w": 26, "h": 31}
+    },
+    "fall":{
       "image":"early-jump.png",
       "mass":{"location":8, "length":8},
       "bound":{"x":0, "y":1, "w": 26, "h": 31}
