@@ -6,11 +6,69 @@
     <link rel="stylesheet" href="main.css" type="text/css" />
     <script src="hiroshima.json" type="text/javascript" charset="utf-8"></script>
     <script src="ksyk.json" type="text/javascript" charset="utf-8"></script>
+    <script src="MegaMan.js" type="text/javascript" charset="utf-8"></script>
+    <script src="Stage.js" type="text/javascript" charset="utf-8"></script>
     <script src="game.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
+    
+    <canvas id="screen" width="960" height="720" class="pixelated" style="position:fixed; top:0px; left: 0px;" display="block"></canvas>
+    <div style="margin-top: 730px;">
+      <p>← → for moving, [SPACE] for jumping.</p>
+      <article>
+        <h1>Update Log</h1>
+        <section>
+          <h3>2012/12/26</h3>
+          <ul>
+            <li>Add slightly move.</li>
+            <li>Add jump.</li>
+            <li>Add idle blink.</li>
+            <li>Fix the drawing glitches when walking to the right side of stage.</li>
+            <li>Move the logic to MegaMan.js, Stage.js</li>
+            <li>Play landing sound.</li>
+            <li>Add cloud/氷結 artwork.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>2012/12/17</h3>
+          <p>First demo. Walk left/right.</p>
+        </section>
+      </article>
 
-    <canvas id="screen" width="960" height="720" class="pixelated">
-
+      <article>
+        <h1>TODO</h1>
+        <ul>
+          <li>MegaMan:
+            <ul>
+              <li>Move left/right collision detection.</li>
+              <li>Jump upward collision detection.</li>
+              <li>Tweak the falling policy. (More accurate boundary calculation)</li>
+              <li>Invoke the jump only on keydown event.</li>
+              <li>Add more actions:
+                <ul>
+                  <li>upstair/downstair</li>
+                  <li>hit</li>
+                  <li>shoot</li>
+                </ul>
+              </li>
+            </ul>
+          </li>  
+          <li>Character system</li>
+          <li>Item system</li>
+          <li>Enemy system</li>
+          <li>Dialogue system</li>
+          <li>Event system</li>
+          <li>Artwork: countless.</li>
+          <li>Music: TBD</li>
+          <li>SFX: TBD</li>
+          <li>Game play:
+            <ul>
+              <li>How to switch between 3 members?</li>
+            </ul>
+          </li>
+          <li>Story writing</li>
+        </ul>
+      </article>
+    </div>
   </body>
 </html>
